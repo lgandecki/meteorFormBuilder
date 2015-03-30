@@ -1,0 +1,26 @@
+<template name="table">
+    <table>
+        <tr>
+            {{#each headers}}
+                <th>{{label}}</th>
+            {{/each}}
+        </tr>
+        {{#if generatedRows}}
+            test
+            {{#each generateRows}}
+                <tr>
+                    {{#each ../fields}}
+                        <td>{{> formField }}</td>
+                    {{/each}}
+                </tr>
+            {{/each}}
+        {{else}}
+            {{#each fields}}
+                <td>{{> formField}}</td>
+            {{/each}}
+        {{/if}}
+    </table>
+</template>
+<template name="generateRows2">
+    Test2
+</template>

@@ -1,0 +1,18 @@
+<template name="form">
+    {{#with form}}
+        {{#each fields}}
+            {{> formField}}
+        {{/each}}
+    {{/with}}
+
+</template>
+
+<template name="formField">
+        {{#if text}}
+            {{> text_form_field}}
+        {{/if}}
+        {{#if table}}
+            {{> table }}
+
+        {{/if}}
+</template>
