@@ -1,12 +1,12 @@
 Template.form.helpers({
     form: function () {
 
-        var _milestones
+        var _milestones;
         return {
             id: "whatever",
             fields: [
                 {text: true, label: "Text example", name: "textExample", dbField: "textExample"},
-                {table: true, label: "", name: "milestones", dbField: "milestones", generatedRows: true,
+                {table: true, label: "", name: "milestones", dbField: "milestones", fixedNumberOfRows: false,
                     headers: [
                         {label: ""},
                         {label: "Milestones or Short Term Objectives/Dates Expected"},

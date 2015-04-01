@@ -5,22 +5,29 @@
                 <th>{{label}}</th>
             {{/each}}
         </tr>
-        {{#if generatedRows}}
-            test
-            {{#each generateRows}}
-                <tr>
-                    {{#each ../fields}}
-                        <td>{{> formField }}</td>
-                    {{/each}}
-                </tr>
+        {{#if fixedNumberOfRows}}
+            {{#each fixedRow}}
+                {{> form_row }}
             {{/each}}
         {{else}}
-            {{#each fields}}
-                <td>{{> formField}}</td>
-            {{/each}}
+            <tr>
+                {{#each dynamicRows}}
+                   {{> form_row }}
+                {{/each}}
+            </tr>
+            {{> add_form_row}}
         {{/if}}
     </table>
 </template>
-<template name="generateRows2">
-    Test2
+
+<template name="form_row">
+    <tr>
+    {{#each fields}}
+        <td>{{> formField}}</td>
+    {{/each}}
+    </tr>
+</template>
+
+<template name="add_form_row">
+
 </template>
