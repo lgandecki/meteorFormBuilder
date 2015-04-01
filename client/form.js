@@ -13,7 +13,6 @@ Template.form.helpers({
                         {label: "Comments/Progress Notes/Dates Achieved"}
                     ],
                     fields: [
-                        {button: true, name: "delete", callFunction: "remove"},
                         {text: true, label: "", name:"milestone", dbField: "milestone"},
                         {text: true, label: "", name: "comments", dbField: "comments"}
                     ]

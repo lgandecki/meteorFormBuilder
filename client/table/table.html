@@ -10,22 +10,21 @@
                 {{> form_row }}
             {{/each}}
         {{else}}
-            <tr>
-                {{#each dynamicRows}}
-                   {{> form_row }}
-                {{/each}}
-            </tr>
+            {{#each dynamicRows}}
+                <tr>
+                    <td><button type="button" name="deleteRow">-</button> </td>
+                    {{> form_row }}
+                </tr>
+            {{/each}}
             {{> add_form_row}}
         {{/if}}
     </table>
 </template>
 
 <template name="form_row">
-    <tr>
     {{#each ../fields}}
         <td>{{> formField}}</td>
     {{/each}}
-    </tr>
 </template>
 
 <template name="add_form_row">
