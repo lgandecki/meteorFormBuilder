@@ -22,6 +22,12 @@ Template.table.events({
         _setQuery['$set'][dbField] = _form[dbField];
 
         Forms.update({'_id': parentId}, _setQuery);
+    },
+    'click .addRow':function(e){
+        var _form = Forms.findOne({'_id':parentId});
+        var _dbField = _form[dbField];
+        console.log(_dbField);
+
     }
 });
 

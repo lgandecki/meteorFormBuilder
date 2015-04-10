@@ -26,7 +26,7 @@ Template.form.helpers({
 
 Template.formField.rendered = function() {
     console.log("This in formField", this);
-}
+};
 // table
 // iterate over values.. like when you add milestones on goal page
 
